@@ -14,5 +14,15 @@ module Bip44
 
       currency_info[:constant]
     end
+
+    def get_currency(hexa)
+      currency = currency.downcase
+
+      currency_info = CONSTANT.find { |c| c[:constant] == hexa }
+
+      raise Error, "Can not found currency from #{hexa}" if currency_info.nil?
+
+      currency_info[:currency]
+    end
   end
 end
