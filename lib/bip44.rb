@@ -1,3 +1,5 @@
+require "yaml"
+
 require "bip44/version"
 require "bip44/constants"
 
