@@ -24,5 +24,11 @@ module Bip44
 
       currency_info[:currency]
     end
+
+    def include_bip44?(currency)
+      currency = currency.downcase
+
+      CONSTANT.map { |c| c[:currency]}.include?(currency)
+    end
   end
 end
