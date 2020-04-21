@@ -36,6 +36,18 @@ Bip44.get_currency("0x80000000")
 # => "btc"
 ```
 
+### Check currency
+
+```ruby
+require "bip44"
+
+Bip44.include_currency?("eth")
+# => true
+
+Bip44.include_currency?("fake_currency")
+# => false
+```
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
